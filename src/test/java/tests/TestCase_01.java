@@ -17,12 +17,12 @@ public class TestCase_01 extends Base{
 
     public List<HashMap<String, String>> TestData;
     
-    HomePage homePage1;
+    HomePage homePage;
     @BeforeMethod
     public void initializeElements()
     {
         TestData = fetchTestData();
-        homePage1 = new HomePage(driver);
+        homePage = new HomePage(driver);
     }
 
     @Test
@@ -32,7 +32,7 @@ public class TestCase_01 extends Base{
         {
         	int rnd=new CommonMethods().generateRandomNumber();
             String[] arrSplit = TestData.get(0).get("EmailID").split("@");            
-            homePage1.login(arrSplit[0]+String.valueOf(rnd)+"@"+arrSplit[1], TestData.get(0).get("Password"));
+            homePage.login(arrSplit[0]+String.valueOf(rnd)+"@"+arrSplit[1], TestData.get(0).get("Password"));
             //homePage.login(arrSplit[0]+String.valueOf(rnd)+arrSplit[1], TestData.get(0).get("Password"));
         }
         catch (org.openqa.selenium.NoSuchElementException e)
