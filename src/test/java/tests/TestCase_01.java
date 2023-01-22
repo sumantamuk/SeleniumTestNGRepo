@@ -3,7 +3,7 @@ package tests;
 import org.testng.annotations.Test;
 
 import org.testng.asserts.*;
-
+import org.testng.Assert;
 import org.testng.annotations.*;
 import framework.dataprovidermanager.CommonMethods;
 import pagefactory.HomePage;
@@ -37,7 +37,8 @@ public class TestCase_01 extends Base{
         }
         catch (org.openqa.selenium.NoSuchElementException e)
         {
-            e.printStackTrace();
+            Assert.fail("Test");
+        	
         }
     }
     
