@@ -37,7 +37,7 @@ public class TestCase_01 extends Base{
         }
         catch (org.openqa.selenium.NoSuchElementException e)
         {
-            Assert.fail();
+            Assert.fail("Test");
         	
         }
     }
